@@ -143,6 +143,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FileProcessing.cpp" />
+    <ClCompile Include="Spreadsheet.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FileProcessing.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
