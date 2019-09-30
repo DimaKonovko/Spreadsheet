@@ -1,5 +1,9 @@
+#include "FileProcessing.h"
+
 #include <windows.h>
 #include <stdlib.h>
+
+using namespace std;
 
 // Declarations
 	// variables
@@ -8,8 +12,9 @@ static TCHAR szTitle[] = L"Spreadsheet";
 int WND_WIDTH = 1000;
 int WND_HEIGHT = 600;
 HINSTANCE hInst;
+vector< vector<string> > Vector2d;
 
-const wchar_t* SPREADSHEET_TXT_1 = L"spreadsheets\\spreedsheet_1.txt";
+const wchar_t* SPREADSHEET_TXT_1 = L"spreadsheets\\spreadsheet_1.txt";
 	// functions
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
@@ -88,6 +93,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 	switch (message) {
 	case WM_CREATE:
+		Vector2d = ParseSpreadsheetTxt(SPREADSHEET_TXT_1);
 		break;
 	case WM_DESTROY:
 		PostQuitMessage(0);
