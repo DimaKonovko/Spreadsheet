@@ -24,7 +24,7 @@ public:
 	static LRESULT CALLBACK winProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 	virtual LRESULT msgHandler(UINT uMsg, WPARAM wParam, LPARAM lParam);
 
-	HWND getWindow();
+	HWND getWindowHwnd();
 	int getWinWidth();
 	int getWinHeight();
 	const wchar_t* getWinClass();

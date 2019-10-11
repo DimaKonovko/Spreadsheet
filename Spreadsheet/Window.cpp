@@ -25,7 +25,7 @@ BOOL Window::create(
 	HMENU  hMenu
 )
 {
-	if (getWindow()) { 
+	if (getWindowHwnd()) { 
 		setWinLastErrorMsg(L"This window has been already created");
 		return FALSE; 
 	}
@@ -65,7 +65,7 @@ BOOL Window::create(
 		this							// pointer to window data
 	);
 
-	if (!getWindow()) {
+	if (!getWindowHwnd()) {
 		setWinLastErrorMsg(L"CreateWindowEx failed");
 		return FALSE;
 	}
@@ -109,13 +109,13 @@ LRESULT Window::msgHandler(UINT uMsg, WPARAM wParam, LPARAM lParam)
 		PostQuitMessage(0);
 		break;
 	}
-	return DefWindowProc(getWindow(), uMsg, wParam, lParam);
+	return DefWindowProc(getWindowHwnd(), uMsg, wParam, lParam);
 }
 
 
 
 // window handle
-HWND Window::getWindow() { return m_hwnd; }
+HWND Window::getWindowHwnd() { return m_hwnd; }
 
 // window width
 void Window::setWinWidth(int winWidth) { m_winWidth = winWidth; }

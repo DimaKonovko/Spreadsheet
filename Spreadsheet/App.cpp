@@ -29,12 +29,12 @@ BOOL App::start(
 	setCmdLine(lpCmdLine);
 	setCmdShow(nCmdShow);
 
-	if (!m_window.create(L"Spreadsheet", L"SpreadsheetClass", WS_OVERLAPPEDWINDOW, 1000, 600)) {
-		setAppLastErrorMsg(L"Call to create window failed");
+	if (!getWindow().create(L"Spreadsheet", L"SpreadsheetClass", WS_OVERLAPPEDWINDOW, 1000, 600)) {
+		setAppLastErrorMsg(getWindow().getLastWindowError());
 		return FALSE;
 	}
 
-	ShowWindow(m_window.getWindow(), nCmdShow);
+	ShowWindow(getWindow().getWindowHwnd(), nCmdShow);
 
 	MSG msg;
 	while (GetMessage(&msg, NULL, 0, 0)) {

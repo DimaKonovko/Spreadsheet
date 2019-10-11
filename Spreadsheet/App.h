@@ -26,6 +26,7 @@ private:
 	HINSTANCE m_hPrevInst;
 	LPSTR m_lpCmdLine;
 	int m_nCmdShow;
+
 	Window m_window;
 	const wchar_t* m_appLastErrorMsg;
 
