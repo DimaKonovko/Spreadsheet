@@ -1,4 +1,4 @@
 # Spreadsheet
 
-App that reads spreadsheet from text file and shows it using WinApi
+App that builds spreadsheet and shows it using WinApi
 

@@ -18,12 +18,9 @@
     <ClCompile Include="Spreadsheet.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FileProcessing.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FileProcessing.h">
+    <ClInclude Include="Spreadsheet.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

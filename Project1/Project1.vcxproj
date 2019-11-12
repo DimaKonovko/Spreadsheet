@@ -20,10 +20,11 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{1444D121-9D7F-4FED-9C39-5C8064C039CF}</ProjectGuid>
+    <ProjectGuid>{898348CB-367B-4C75-8F82-337E8310D777}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Spreadsheet</RootNamespace>
+    <RootNamespace>Project1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Spreadsheet</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -143,11 +144,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FileProcessing.cpp" />
     <ClCompile Include="Spreadsheet.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FileProcessing.h" />
+    <ClInclude Include="Spreadsheet.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
